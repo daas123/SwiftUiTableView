@@ -9,11 +9,15 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        ZStack{
+            VStack{
+                Text("This is default TableView")
+                    .bold()
+                    .font(.title2)
+                List (1..<12) {
+                    Text("\($0)")
+                }
+            }
         }
         .padding()
     }
